@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <title>Frost Coffee - Premium Coffee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body { font-family: 'Montserrat', sans-serif; }
+      .font-display { font-family: 'Lora', serif; }
+      .card { transition: all .35s ease; }
+      .card:hover { transform: translateY(-8px); box-shadow: 0 20px 45px rgba(0,0,0,.15); }
+    </style>
+  </head>
+  <body class="bg-[#F5F1E8] text-[#2C5530]">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full bg-[#3E2723] text-white z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="logofrostcoffee.png" class="w-10 h-10">
+          <span class="font-display text-2xl font-bold">Frost Coffee</span>
+        </div>
+        <div class="hidden md:flex gap-8">
+          <a href="#products">Produk</a>
+          <a href="#order">Order</a>
+          <a href="#admin">Admin</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen bg-cover bg-center flex items-center justify-center relative"style="background-image:url('frostcoffeeBG.jpg');">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative text-center text-white px-6 pt-20">
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-6">Premium Coffee Experience</h1>
+        <p class="mb-8">Kopi terbaik untuk momen terbaik Anda</p>
+        <a href="#order" class="bg-[#6D4C41] px-10 py-4 rounded-full font-bold hover:scale-105 transition">Order Sekarang</a>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="py-20 px-6">
+      <h2 class="font-display text-4xl font-bold text-center mb-12">Produk Kami</h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+        <!-- CARD -->
+        <div class="card bg-white rounded-xl overflow-hidden">
+          <img src="Espresso.jpeg" class="h-48 w-full object-cover">
+          <div class="p-6 text-center">
+            <div class="text-3xl mb-2">☕</div>
+            <h3 class="font-display text-xl font-bold">Espresso</h3>
+            <p class="opacity-80">Rp 25.000</p>
+          </div>
+        </div>
+
+        <div class="card bg-white rounded-xl overflow-hidden">
+          <img src="Cold Brew.jpeg" class="h-48 w-full object-cover">
+          <div class="p-6 text-center">
+            <div class="text-3xl mb-2">🧊</div>
+            <h3 class="font-display text-xl font-bold">Cold Brew</h3>
+            <p class="opacity-80">Rp 35.000</p>
+          </div>
+        </div>
+
+        <div class="card bg-white rounded-xl overflow-hidden">
+          <img src="Iced Latte.jpeg" class="h-48 w-full object-cover">
+          <div class="p-6 text-center">
+            <div class="text-3xl mb-2">🥤</div>
+            <h3 class="font-display text-xl font-bold">Iced Latte</h3>
+            <p class="opacity-80">Rp 32.000</p>
+          </div>
+        </div>
+
+        <div class="card bg-white rounded-xl overflow-hidden">
+          <img src="Cappucino.jpeg" class="h-48 w-full object-cover">
+          <div class="p-6 text-center">
+            <div class="text-3xl mb-2">☕✨</div>
+            <h3 class="font-display text-xl font-bold">Cappucino</h3>
+            <p class="opacity-80">Rp 30.000</p>
+          </div>
+        </div>
+
+        <div class="card bg-white rounded-xl overflow-hidden">
+          <img src="Mocha.jpeg" class="h-48 w-full object-cover">
+          <div class="p-6 text-center">
+            <div class="text-3xl mb-2">🍫</div>
+            <h3 class="font-display text-xl font-bold">Mocha</h3>
+            <p class="opacity-80">Rp 38.000</p>
+          </div>
+        </div>
+
+        <div class="card bg-white rounded-xl overflow-hidden">
+          <img src="Caramel Macchiato.jpeg" class="h-48 w-full object-cover">
+          <div class="p-6 text-center">
+            <div class="text-3xl mb-2">🍯☕</div>
+            <h3 class="font-display text-xl font-bold">Caramel Macchiato</h3>
+            <p class="opacity-80">Rp 40.000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER -->
+    <section id="order" class="py-20 px-6 bg-[#3E2723] text-white">
+      <div class="max-w-xl mx-auto">
+        <h2 class="font-display text-4xl font-bold text-center mb-8">Form Pemesanan</h2>
+        <form id="orderForm" class="bg-white text-black p-6 rounded-xl space-y-4">
+
+          <input id="nama" required placeholder="Nama" class="w-full p-3 border rounded">
+
+            <select id="produk" class="w-full p-3 border rounded">
+              <option value="25000">Espresso</option>
+              <option value="35000">Cold Brew</option>
+              <option value="32000">Iced Latte</option>
+              <option value="30000">Cappucino</option>
+              <option value="38000">Mocha</option>
+              <option value="40000">Caramel Macchiato</option>
+            </select>
+
+          <input id="jumlah" type="number" min="1" value="1" class="w-full p-3 border rounded">
+
+          <select id="mode" class="w-full p-3 border rounded">
+            <option value="0">Pickup (Gratis)</option>
+            <option value="10000">Delivery (+10.000)</option>
+          </select>
+
+          <textarea id="catatan" placeholder="Catatan" class="w-full p-3 border rounded"></textarea>
+
+          <div class="text-right font-bold text-lg">Total: Rp <span id="total">25.000</span></div>
+
+          <button class="w-full bg-green-600 text-white py-4 rounded-lg font-bold flex justify-center gap-2">
+            <i data-lucide="message-circle"></i> Order via WhatsApp
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ADMIN -->
+    <section id="admin" class="py-20 px-6">
+      <h2 class="font-display text-4xl font-bold text-center mb-10">Katalog Admin</h2>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
+        <div class="card bg-white p-6 rounded-xl">Espresso<br><b>25.000</b></div>
+        <div class="card bg-white p-6 rounded-xl">Cold Brew<br><b>35.000</b></div>
+        <div class="card bg-white p-6 rounded-xl">Iced Latte<br><b>32.000</b></div>
+        <div class="card bg-white p-6 rounded-xl">Cappucino<br><b>30.000</b></div>
+        <div class="card bg-white p-6 rounded-xl">Mocha<br><b>38.000</b></div>
+        <div class="card bg-white p-6 rounded-xl">Caramel Macchiato<br><b>40.000</b></div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="bg-black text-white py-4 text-center text-sm">
+      © 2026 Frost Coffee. All Rights Reserved.
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      const produk = document.getElementById("produk");
+      const jumlah = document.getElementById("jumlah");
+      const mode = document.getElementById("mode");
+      const totalEl = document.getElementById("total");
+
+      function hitung() {
+        const total = (produk.value * jumlah.value) + parseInt(mode.value);
+        totalEl.innerText = total.toLocaleString("id-ID");
+      }
+      produk.onchange = jumlah.oninput = mode.onchange = hitung;
+
+        document.getElementById("orderForm").addEventListener("submit", e => {
+          e.preventDefault();
+          const pesan =
+          `Halo Frost Coffee ☕
+          Nama: ${nama.value}
+          Produk: ${produk.options[produk.selectedIndex].text}
+          Jumlah: ${jumlah.value}
+          Mode: ${mode.options[mode.selectedIndex].text}
+          Total: Rp ${totalEl.innerText}
+          Catatan: ${catatan.value || "-"}`;
+
+          window.open(`https://wa.me/6283198755829?text=${encodeURIComponent(pesan)}`, "_blank");
+        });
+    </script>
+
+  </body>
+</html>
