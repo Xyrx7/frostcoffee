@@ -2,231 +2,159 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8">
-    <title>Frost Coffee - Premium Coffee</title>
+    <title>Frost Coffee Id</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat&display=swap" rel="stylesheet">
     <style>
-      body { font-family: 'Montserrat', sans-serif; }
-      .font-display { font-family: 'Lora', serif; }
-      .card { transition: all .35s ease; }
-      .card:hover { transform: translateY(-8px); box-shadow: 0 20px 45px rgba(0,0,0,.15); }
+      body{font-family:Montserrat;}
+      .font-display{font-family:Lora;}
+      .card{transition:.3s}
+      .card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,.2)}
     </style>
   </head>
 
-  <body class="bg-[#F5F1E8] text-[#2C5530]">
+  <body class="bg-[#F5F1E8]">
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 w-full bg-[#3E2723] text-white z-50">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <img src="logofrostcoffee.png" class="w-10 h-10">
-          <span class="font-display text-2xl font-bold">Frost Coffee</span>
-        </div>
-        <div class="hidden md:flex gap-8">
-          <a href="#products">Produk</a>
-          <a href="#about">Tentang</a>
-          <a href="#order">Order</a>
-          <a href="#contact">Kontak</a>
-        </div>
+    <nav class="bg-[#3E2723] text-white p-4 flex justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logofrostcoffee.png" class="w-8">
+        <span class="font-display text-xl">Frost Coffee</span>
+      </div>
+      <div class="space-x-4">
+        <a href="index.html">Home</a>
+        <a href="produk.html">Produk</a>
+        <a href="order.html">Order</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
       </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="min-h-screen bg-cover bg-center flex items-center justify-center relative"
-      style="background-image:url('frostcoffeeBG.jpg');">
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative text-center text-white px-6 pt-20">
-        <h1 class="font-display text-5xl md:text-7xl font-bold mb-6">
-          Premium Coffee Experience
-        </h1>
-        <p class="mb-8">Kopi terbaik untuk momen terbaik Anda</p>
-        <a href="#order" class="bg-[#6D4C41] px-10 py-4 rounded-full font-bold hover:scale-105 transition">
-          Order Sekarang
-        </a>
+    <section class="min-h-[70vh] bg-cover bg-center flex items-center justify-center text-white"
+      style="background-image:url('frostcoffeeBG.jpg')">
+      <div class="bg-black/60 p-10 text-center rounded-xl">
+        <h1 class="font-display text-5xl mb-4">Premium Coffee</h1>
+        <p class="mb-6">Best Seller Kami</p>
+        <a href="produk.html" class="bg-[#6D4C41] px-6 py-3 rounded-full">Lihat Semua Produk</a>
       </div>
     </section>
 
-    <!-- PRODUCTS -->
-    <section id="products" class="py-20 px-6">
-      <h2 class="font-display text-4xl font-bold text-center mb-12">Produk Kami</h2>
-      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <!-- (SEMUA CARD PRODUK TIDAK DIUBAH) -->
-        <!-- Espresso -->
+    <section class="py-20 px-6">
+      <h2 class="font-display text-4xl text-center mb-10">Best Seller</h2>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <div class="card bg-white rounded-xl overflow-hidden">
-          <img src="Espresso.jpeg" class="h-48 w-full object-cover">
-          <div class="p-6 text-center">
-            <div class="text-3xl mb-2">☕</div>
-            <h3 class="font-display text-xl font-bold">Espresso</h3>
-            <p class="opacity-80">Rp 25.000</p>
+          <img src="Espresso.jpeg" class="h-40 w-full object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-display">Espresso</h3>
+            <p>Rp 25.000</p>
+            
+            <a href="order.html?produk=Espresso"
+              class="inline-block bg-[#6D4C41] text-white px-4 py-2 rounded-full hover:scale-105 transition">
+              Pesan Sekarang
+            </a>
           </div>
         </div>
 
         <div class="card bg-white rounded-xl overflow-hidden">
-          <img src="Cold Brew.jpeg" class="h-48 w-full object-cover">
-          <div class="p-6 text-center">
-            <div class="text-3xl mb-2">🧊</div>
-            <h3 class="font-display text-xl font-bold">Cold Brew</h3>
-            <p class="opacity-80">Rp 35.000</p>
+          <img src="Iced Latte.jpeg" class="h-40 w-full object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-display">Iced Latte</h3>
+            <p>Rp 32.000</p>
+            <a href="order.html?produk=Iced Latte"
+              class="inline-block bg-[#6D4C41] text-white px-4 py-2 rounded-full hover:scale-105 transition">
+              Pesan Sekarang
+            </a>
           </div>
         </div>
 
         <div class="card bg-white rounded-xl overflow-hidden">
-          <img src="Iced Latte.jpeg" class="h-48 w-full object-cover">
-          <div class="p-6 text-center">
-            <div class="text-3xl mb-2">🥤</div>
-            <h3 class="font-display text-xl font-bold">Iced Latte</h3>
-            <p class="opacity-80">Rp 32.000</p>
-          </div>
-        </div>
-
-        <div class="card bg-white rounded-xl overflow-hidden">
-          <img src="Cappucino.jpeg" class="h-48 w-full object-cover">
-          <div class="p-6 text-center">
-            <div class="text-3xl mb-2">☕✨</div>
-            <h3 class="font-display text-xl font-bold">Cappucino</h3>
-            <p class="opacity-80">Rp 30.000</p>
-          </div>
-        </div>
-
-        <div class="card bg-white rounded-xl overflow-hidden">
-          <img src="Mocha.jpeg" class="h-48 w-full object-cover">
-          <div class="p-6 text-center">
-            <div class="text-3xl mb-2">🍫</div>
-            <h3 class="font-display text-xl font-bold">Mocha</h3>
-            <p class="opacity-80">Rp 38.000</p>
-          </div>
-        </div>
-
-        <div class="card bg-white rounded-xl overflow-hidden">
-          <img src="Caramel Macchiato.jpeg" class="h-48 w-full object-cover">
-          <div class="p-6 text-center">
-            <div class="text-3xl mb-2">🍯☕</div>
-            <h3 class="font-display text-xl font-bold">Caramel Macchiato</h3>
-            <p class="opacity-80">Rp 40.000</p>
+          <img src="Caramel Macchiato.jpeg" class="h-40 w-full object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-display">Caramel Macchiato</h3>
+            <p>Rp 40.000</p>
+            <a href="order.html?produk=Caramel Macchiato"
+              class="inline-block bg-[#6D4C41] text-white px-4 py-2 rounded-full hover:scale-105 transition">
+              Pesan Sekarang
+            </a>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-20 px-6">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-display text-4xl font-bold mb-6">Tentang Kami</h2>
-        <p class="text-lg opacity-80">
-          Frost Coffee adalah brand kopi premium yang menghadirkan cita rasa terbaik
-          dari biji kopi pilihan Indonesia. Setiap sajian dibuat dengan passion,
-          kualitas, dan perhatian pada detail untuk memberikan pengalaman kopi terbaik.
-        </p>
-      </div>
-    </section>
-
-    <!-- ORDER -->
-    <section id="order" class="py-20 px-6 bg-[#3E2723] text-white">
-      <div class="max-w-xl mx-auto">
-        <h2 class="font-display text-4xl font-bold text-center mb-8">Form Pemesanan</h2>
-        <!-- FORM TIDAK DIUBAH -->
-        <form id="orderForm" class="bg-white text-black p-6 rounded-xl space-y-4">
-          <input id="nama" required placeholder="Nama" class="w-full p-3 border rounded">
-          <select id="produk" class="w-full p-3 border rounded">
-            <option value="25000">Espresso</option>
-            <option value="35000">Cold Brew</option>
-            <option value="32000">Iced Latte</option>
-            <option value="30000">Cappucino</option>
-            <option value="38000">Mocha</option>
-            <option value="40000">Caramel Macchiato</option>
-          </select>
-          <input id="jumlah" type="number" min="1" value="1" class="w-full p-3 border rounded">
-          <select id="mode" class="w-full p-3 border rounded">
-            <option value="0">Pickup (Gratis)</option>
-            <option value="10000">Delivery (+10.000)</option>
-          </select>
-          <textarea id="catatan" placeholder="Catatan" class="w-full p-3 border rounded"></textarea>
-          <div class="text-right font-bold text-lg">
-            Total: Rp <span id="total">25.000</span>
-          </div>
-          <button class="w-full bg-green-600 text-white py-4 rounded-lg font-bold flex justify-center gap-2">
-            <i data-lucide="message-circle"></i> Order via WhatsApp
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 px-6">
-      <h2 class="font-display text-4xl font-bold text-center mb-10">Kontak Kami</h2>
-      <div class="max-w-xl mx-auto space-y-6 text-center">
-
-        <!-- EMAIL -->
-        <a href="mailto:frostcoffeeid20@gmail.com
-          ?subject=Feedback%20Frost%20Coffee
-          &body=Halo%20Frost%20Coffee%2C%0A%0ASaya%20ingin%20memberikan%20feedback%20sebagai%20berikut%3A%0A%0ANama%3A%20%0APesan%3A%20"
-          class="flex justify-center items-center gap-3 group hover:underline">
-          <i data-lucide="mail"
-           class="transition text-gray-600 group-hover:text-red-600"></i>
-          <span>frostcoffeeid20@gmail.com</span>
-        </a>
-
-        <!-- WHATSAPP -->
-        <a href="https://wa.me/6283198755829"
-           target="_blank"
-           class="flex justify-center items-center gap-3 group hover:underline">
-          <i data-lucide="message-circle"
-           class="transition text-gray-600 group-hover:text-green-500"></i>
-          <span>+62 831-9875-5829</span>
-        </a>
-
-        <!-- INSTAGRAM -->
-        <a href="https://instagram.com/frostcoffee.id"
-           target="_blank"
-           class="flex justify-center items-center gap-3 group hover:underline">
-          <i data-lucide="instagram"
-           class="transition text-gray-600 group-hover:text-pink-500"></i>
-          <span>@frostcoffee.id</span>
-        </a>
-      </div>
-    </section>
-
 
     <!-- FOOTER -->
-    <footer class="bg-black text-white py-4 text-center text-sm">
-      © 2026 Frost Coffee ID. All Rights Reserved.
+    <footer class="bg-[#9B8F63] text-white mt-20">
+      <div class="max-w-7xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-4 text-center md:text-left">
+
+        <!-- LOGO & DESKRIPSI -->
+        <div>
+          <div class="flex justify-center md:justify-start items-center gap-3 mb-4">
+            <img src="logofrostcoffee.png" class="w-12 h-12">
+            <span class="font-display text-2xl font-bold">Frost Coffee</span>
+          </div>
+          <p class="text-sm opacity-90 leading-relaxed">
+            Frost Coffee menyajikan kopi berkualitas
+            untuk menemani momen terbaik Anda setiap hari.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div>
+          <h4 class="font-display text-lg font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:underline">Home</a></li>
+            <li><a href="produk.html" class="hover:underline">Produk</a></li>
+            <li><a href="tentang.html" class="hover:underline">Tentang</a></li>
+            <li><a href="kontak.html" class="hover:underline">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- KONTAK -->
+        <div>
+          <h4 class="font-display text-lg font-bold mb-4">Kontak</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex justify-center md:justify-start items-center gap-2">
+              <i data-lucide="mail"></i>
+              <a href="mailto:frostcoffee@gmail.com" class="hover:underline">
+                frostcoffee@gmail.com
+              </a>
+            </li>
+            <li class="flex justify-center md:justify-start items-center gap-2">
+              <i data-lucide="message-circle"></i>
+              <a href="https://wa.me/6283198755829" target="_blank" class="hover:underline">
+                +62 831-9875-5829
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SOSIAL MEDIA -->
+        <div>
+          <h4 class="font-display text-lg font-bold mb-4">Follow Us</h4>
+          <div class="flex justify-center md:justify-start gap-4">
+            <a href="https://instagram.com/frostcoffee.id" target="_blank"
+              class="p-3 rounded-full bg-white/20 hover:bg-pink-500 transition">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://wa.me/6283198755829" target="_blank"
+              class="p-3 rounded-full bg-white/20 hover:bg-green-500 transition">
+              <i data-lucide="message-circle"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div class="border-t border-white/20 py-4 text-center text-sm opacity-80">
+        © 2026 Frost Coffee. All Rights Reserved.
+      </div>
     </footer>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
-
-      const produk = document.getElementById("produk");
-      const jumlah = document.getElementById("jumlah");
-      const mode = document.getElementById("mode");
-      const totalEl = document.getElementById("total");
-
-      function hitung() {
-        const total = (produk.value * jumlah.value) + parseInt(mode.value);
-        totalEl.innerText = total.toLocaleString("id-ID");
-      }
-      produk.onchange = jumlah.oninput = mode.onchange = hitung;
-
-      document.getElementById("orderForm").addEventListener("submit", e => {
-        e.preventDefault();
-        const pesan =
-        `Halo Frost Coffee ☕
-        Nama: ${nama.value}
-        Produk: ${produk.options[produk.selectedIndex].text}
-        Jumlah: ${jumlah.value}
-        Mode: ${mode.options[mode.selectedIndex].text}
-        Total: Rp ${totalEl.innerText}
-        Catatan: ${catatan.value || "-"}`;
-
-        window.open(`https://wa.me/6283198755829?text=${encodeURIComponent(pesan)}`, "_blank");
-      });
     </script>
 
   </body>
 </html>
-
-
-
